@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MGA_JS1</title>
+</head>
+<body>
+	<!-- Título principal de la página -->
+	<h1>Gestión de Usuarios</h1>
+
+	<!-- Formulario para agregar un nuevo usuario -->
+	<label for="nombre">Nombre de usuario:</label>
+	<input type="text" id="nombre">
+	<!-- Campo para ingresar el nombre del usuario -->
+	<br>
+	<br>
+
+	<label for="fechaNacimiento">Fecha de Nacimiento:</label>
+	<input type="date" id="fechaNacimiento">
+	<!-- Campo para ingresar la fecha de nacimiento -->
+	<br>
+	<br>
+
+	<button onclick="agregarUsuario()">Agregar Usuario</button>
+	<!-- Botón para agregar usuario -->
+
+	<br>
+	<br>
+
+	<!-- Formulario para asignar tareas a un usuario existente -->
+	<h2>Asignar Tareas</h2>
+	<label for="usuarioId">ID o Nombre del Usuario:</label>
+	<input type="text" id="usuarioId">
+	<!-- Campo para ingresar el ID o nombre del usuario -->
+	<br>
+	<br>
+
+	<label for="tarea">Descripción de la Tarea:</label>
+	<input type="text" id="tarea">
+	<!-- Campo para ingresar la descripción de la tarea -->
+	<br>
+	<br>
+
+	<button onclick="asignarTarea()">Asignar Tarea</button>
+	<!-- Botón para asignar la tarea al usuario -->
+
+	<br>
+	<br>
+
+	<!-- Tabla que muestra la lista de usuarios -->
+	<h2>Lista de Usuarios</h2>
+	<table border="1">
+		<!-- Borde de la tabla para que sea visible -->
+		<tr>
+			<!-- Encabezados de la tabla con funcionalidad para ordenar -->
+			<th onclick="ordenarUsuarios('id')">ID</th>
+			<th onclick="ordenarUsuarios('nombre')">Nombre</th>
+			<th onclick="ordenarUsuarios('edad')">Edad</th>
+			<th>Tareas</th>
+			<th>Eliminar</th>
+		</tr>
+		<!-- Cuerpo de la tabla donde se mostrarán los usuarios -->
+		<tbody id="tablaUsuarios"></tbody>
+	</table>
+
+	<!-- Enlace al archivo JavaScript que contiene la lógica de la aplicación -->
+	<script src="form.js"></script>
+</body>
+</html>
